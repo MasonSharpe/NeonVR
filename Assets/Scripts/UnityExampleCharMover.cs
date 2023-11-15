@@ -74,7 +74,6 @@ public class UnityExampleCharMover : MonoBehaviour
             {
                 // no more until we recontact ground
                 groundedTimer = 0;
-                print("wawa");
 
                 // Physics dynamics formula for calculating jump up velocity based on height and gravity
                 verticalVelocity += Mathf.Sqrt(jumpHeight * 2 * gravityValue);
