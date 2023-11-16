@@ -51,7 +51,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 5
+  m_Radius: 6.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4468674156184797947
 GameObject:
@@ -5274,7 +5274,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.12549019, g: 1, b: 0, a: 1}
   m_Intensity: 2.5
-  m_Range: 1.34
+  m_Range: 1.75
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

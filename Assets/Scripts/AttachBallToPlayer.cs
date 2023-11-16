@@ -14,6 +14,6 @@ public class AttachBallToPlayer : MonoBehaviour
         {
             isAttached = !isAttached;
         }
-        if (isAttached) ball.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z + 1);
+        if (isAttached) ball.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z + 1);
     }
 }
