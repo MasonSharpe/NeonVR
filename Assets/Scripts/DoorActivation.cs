@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class DoorActivation : MonoBehaviour
 {
-    public GameObject doorObject;
+    public Collider areaCollider;
+    public MeshRenderer areaVisual;
+    public bool activatedByKey = true;
 
     public void OpenDoor()
     {
-        doorObject.SetActive(false);
+        areaCollider.enabled = false;
+        areaVisual.enabled = false;
     }
 
     public void CloseDoor()
     {
-        doorObject.SetActive(true);
+        areaCollider.enabled = true;
+        areaVisual.enabled = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 10 && activatedByKey)
+        {
+            OpenDoor();
+            Destroy(other.transform.parent.gameObject);
+        }
     }
 }
