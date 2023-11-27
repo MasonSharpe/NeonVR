@@ -241,6 +241,74 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1001 &471783901
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: efc5b4e0862c6c14ab41f8f92d187405,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.0314894
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: efc5b4e0862c6c14ab41f8f92d187405,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: efc5b4e0862c6c14ab41f8f92d187405,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.552
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: efc5b4e0862c6c14ab41f8f92d187405,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: efc5b4e0862c6c14ab41f8f92d187405,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: efc5b4e0862c6c14ab41f8f92d187405,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: efc5b4e0862c6c14ab41f8f92d187405,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: efc5b4e0862c6c14ab41f8f92d187405,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: efc5b4e0862c6c14ab41f8f92d187405,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: efc5b4e0862c6c14ab41f8f92d187405,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: efc5b4e0862c6c14ab41f8f92d187405,
+        type: 3}
+      propertyPath: m_Name
+      value: DeathSpikes(NeonVr)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efc5b4e0862c6c14ab41f8f92d187405, type: 3}
 --- !u!1 &568532731
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,12 +417,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7a6e1a5679f1484458183a67e6be3697,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a6e1a5679f1484458183a67e6be3697,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.5627403
+      value: -4.65
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7a6e1a5679f1484458183a67e6be3697,
         type: 3}
@@ -492,3 +560,4 @@ SceneRoots:
   - {fileID: 51712159}
   - {fileID: 1314975955}
   - {fileID: 959789249}
+  - {fileID: 471783901}
