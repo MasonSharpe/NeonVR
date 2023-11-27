@@ -7,17 +7,18 @@ public class DoorActivation : MonoBehaviour
     public Collider areaCollider;
     public MeshRenderer areaVisual;
     public bool activatedByKey = true;
+    public bool reversed = false;
 
     public void OpenDoor()
     {
-        areaCollider.enabled = false;
-        areaVisual.enabled = false;
+        areaCollider.enabled = reversed;
+        areaVisual.enabled = reversed;
     }
 
     public void CloseDoor()
     {
-        areaCollider.enabled = true;
-        areaVisual.enabled = true;
+        areaCollider.enabled = !reversed;
+        areaVisual.enabled = !reversed;
     }
 
     private void OnTriggerEnter(Collider other)
