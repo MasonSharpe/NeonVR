@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class EndOfLevel : MonoBehaviour
 {
+    private bool triggered = false;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 6)
+        if (other.gameObject.layer == 6 && !triggered)
         {
-            Fade.instance.Hide();
+            Fade.instance.Show();
+            triggered = true;
         }
         
     }
