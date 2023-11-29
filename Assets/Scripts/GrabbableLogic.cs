@@ -10,8 +10,5 @@ public class GrabbableLogic : MonoBehaviour
         Recall.instance.SetLastGrabbedObject(gameObject);
     }
 
-    public void SetRecallPosition()
-    {
-        Recall.instance.SetObjectRecallPosition();
-    }
+
 }

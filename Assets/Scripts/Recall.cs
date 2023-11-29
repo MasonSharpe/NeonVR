@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class Recall : MonoBehaviour
 {
     public static Recall instance;
     public GameObject lastGrabbedObject;
-    public Vector3 lastObjectPosition = Vector3.zero;
     public InputActionProperty recallButton;
+    public TextMeshProUGUI text;
+    public GameObject player;
     public bool canRecall = true;
 
     private void Update()
     {
         float triggerValue = recallButton.action.ReadValue<float>();
+       // text.text = triggerValue.ToString();
         if (triggerValue >= 1 && canRecall)
         {
             canRecall = false;
@@ -33,12 +36,9 @@ public class Recall : MonoBehaviour
         lastGrabbedObject = gameObject;
     }
 
-    public void SetObjectRecallPosition()
-    {
-        lastObjectPosition = lastGrabbedObject.transform.position;
-    }
+
     public void RecallObject()
     {
-        lastGrabbedObject.transform.position = lastObjectPosition;
+        lastGrabbedObject.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z + 1);
     }
 }

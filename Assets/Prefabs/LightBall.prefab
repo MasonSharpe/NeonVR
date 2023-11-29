@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 2587466254057946523}
   - component: {fileID: 2191477998322115905}
   - component: {fileID: 12219096670932815}
+  - component: {fileID: 8238975001816410283}
   m_Layer: 0
   m_Name: LightBall
   m_TagString: Untagged
@@ -419,7 +420,7 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8238975001816410283}
         m_TargetAssemblyTypeName: GrabbableLogic, Assembly-CSharp
         m_MethodName: SetRecallObject
         m_Mode: 1
@@ -434,7 +435,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8238975001816410283}
         m_TargetAssemblyTypeName: GrabbableLogic, Assembly-CSharp
         m_MethodName: SetRecallPosition
         m_Mode: 1
@@ -536,7 +537,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_ThrowVelocityScale: 4
+  m_ThrowVelocityScale: 2
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
@@ -544,6 +545,18 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &8238975001816410283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6176964458811295127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c794a3bb38d2348b221a2d450a57bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7123593148070750224
 GameObject:
   m_ObjectHideFlags: 0
@@ -5419,7 +5432,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.12549019, g: 1, b: 0, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 1
   m_Range: 1.75
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

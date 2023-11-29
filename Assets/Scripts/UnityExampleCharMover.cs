@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+using UnityEngine.InputSystem;
+
 // Originally from Unity examples at:
 // https://docs.unity3d.com/ScriptReference/CharacterController.Move.html
 //
@@ -14,7 +15,7 @@ using UnityEngine;
 //    - put this script on the root of it
 //
 // That's it.
- 
+
 public class UnityExampleCharMover : MonoBehaviour
 {
     public CharacterController controller;
@@ -24,7 +25,8 @@ public class UnityExampleCharMover : MonoBehaviour
     public float playerSpeed = 2.0f;
     public float jumpHeight = 1.0f;
     public float gravityValue = 9.81f;
- 
+    public InputActionProperty jumpButton;
+
     private void Start()
     {
         // always add a controller
@@ -65,9 +67,9 @@ public class UnityExampleCharMover : MonoBehaviour
         {
             gameObject.transform.forward = move;
         }
- 
+        float triggerValue = jumpButton.action.ReadValue<float>();
         // allow jump as long as the player is on the ground
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") || triggerValue != 0)
         {
             // must have been grounded recently to allow jump
             if (groundedTimer > 0)
