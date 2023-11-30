@@ -31,6 +31,11 @@ public class Recall : MonoBehaviour
     {
         instance = this;
     }
+
+    private void Start()
+    {
+        player.transform.localPosition = Vector3.zero;
+    }
     public void SetLastGrabbedObject(GameObject gameObject)
     {
         lastGrabbedObject = gameObject;
@@ -39,6 +44,11 @@ public class Recall : MonoBehaviour
 
     public void RecallObject()
     {
-        lastGrabbedObject.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z + 1);
+        if (lastGrabbedObject != null)
+        {
+            lastGrabbedObject.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z);
+            lastGrabbedObject.GetComponent<Rigidbody>().velocity = Vector3.up * 4;
+        }
+
     }
 }

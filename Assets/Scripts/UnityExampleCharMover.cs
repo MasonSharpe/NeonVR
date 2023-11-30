@@ -19,8 +19,7 @@ using UnityEngine.InputSystem;
 public class UnityExampleCharMover : MonoBehaviour
 {
     public CharacterController controller;
-    public GameObject offset;
-    private float verticalVelocity;
+    public Rigidbody rb;
     private float groundedTimer;        // to allow jumping when going down ramps
     public float playerSpeed = 2.0f;
     public float jumpHeight = 1.0f;
@@ -47,26 +46,28 @@ public class UnityExampleCharMover : MonoBehaviour
         }
  
         // slam into the ground
-        if (groundedPlayer && verticalVelocity < 0)
+ 
+
+        // apply gravity always, to let us track down ramps properly
+        rb.velocity = new Vector3(0, rb.velocity.y - gravityValue * Time.deltaTime, 0);
+        if (rb.velocity.y < 0)
         {
             // hit ground
-            verticalVelocity = 0f;
+            rb.velocity = Vector3.zero;
         }
- 
-        // apply gravity always, to let us track down ramps properly
-        verticalVelocity -= gravityValue * Time.deltaTime;
- 
+
         // gather lateral input control
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        // Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 move = Vector3.zero;
  
         // scale by speed
-        move *= playerSpeed;
+       // move *= playerSpeed;
  
         // only align to motion if we are providing enough input
-        if (move.magnitude > 0.05f)
-        {
-            gameObject.transform.forward = move;
-        }
+       // if (move.magnitude > 0.05f)
+       // {
+          //  gameObject.transform.forward = move;
+       // }
         float triggerValue = jumpButton.action.ReadValue<float>();
         // allow jump as long as the player is on the ground
         if (Input.GetButtonDown("Jump") || triggerValue != 0)
@@ -78,16 +79,15 @@ public class UnityExampleCharMover : MonoBehaviour
                 groundedTimer = 0;
 
                 // Physics dynamics formula for calculating jump up velocity based on height and gravity
-                verticalVelocity += Mathf.Sqrt(jumpHeight * 2 * gravityValue);
+                move.y = Mathf.Sqrt(jumpHeight * 2 * gravityValue);
+                rb.velocity = move;
+
             }
         }
  
         // inject Y velocity before we use it
-        move.y = verticalVelocity;
- 
+
         // call .Move() once only
-        controller.Move(move * Time.deltaTime);
-        offset.transform.position = gameObject.transform.position;
-        
+    
     }
 }
