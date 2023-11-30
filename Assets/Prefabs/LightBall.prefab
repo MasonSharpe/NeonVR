@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 2191477998322115905}
   - component: {fileID: 12219096670932815}
   - component: {fileID: 8238975001816410283}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LightBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -434,19 +434,7 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8238975001816410283}
-        m_TargetAssemblyTypeName: GrabbableLogic, Assembly-CSharp
-        m_MethodName: SetRecallPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -5432,7 +5420,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.12549019, g: 1, b: 0, a: 1}
-  m_Intensity: 1
+  m_Intensity: 4
   m_Range: 1.75
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
