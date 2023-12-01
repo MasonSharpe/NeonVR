@@ -31,6 +31,7 @@ public class Fade : MonoBehaviour {
         sprite.color = new Color(0, 0, 0, isShowing ? (2f - fadeTimer) / 2f : fadeTimer / 2f);
         if (fadeTimer <= -1 && isShowing)
         {
+            print(GameManager.instance.level);
             SceneManager.LoadScene("Level" + ++GameManager.instance.level);
             isShowing = false;
             Hide();

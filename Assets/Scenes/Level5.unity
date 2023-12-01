@@ -827,74 +827,6 @@ Transform:
   - {fileID: 624676615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &334127795
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1632187252991448407, guid: 7040392f11d3605499c2dd067e981d0c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.5922058
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632187252991448407, guid: 7040392f11d3605499c2dd067e981d0c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632187252991448407, guid: 7040392f11d3605499c2dd067e981d0c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 13.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632187252991448407, guid: 7040392f11d3605499c2dd067e981d0c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632187252991448407, guid: 7040392f11d3605499c2dd067e981d0c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632187252991448407, guid: 7040392f11d3605499c2dd067e981d0c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632187252991448407, guid: 7040392f11d3605499c2dd067e981d0c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632187252991448407, guid: 7040392f11d3605499c2dd067e981d0c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632187252991448407, guid: 7040392f11d3605499c2dd067e981d0c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632187252991448407, guid: 7040392f11d3605499c2dd067e981d0c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3506627923615661046, guid: 7040392f11d3605499c2dd067e981d0c,
-        type: 3}
-      propertyPath: m_Name
-      value: LevelEnd
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7040392f11d3605499c2dd067e981d0c, type: 3}
 --- !u!1 &364310091
 GameObject:
   m_ObjectHideFlags: 0
@@ -4595,7 +4527,6 @@ GameObject:
   - component: {fileID: 1214046181}
   - component: {fileID: 1214046180}
   - component: {fileID: 1214046179}
-  - component: {fileID: 1214046178}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4603,23 +4534,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1214046178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214046177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &1214046179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4965,10 +4879,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1355567942}
-  offset: {fileID: 603080303}
+  rb: {fileID: 0}
   playerSpeed: 2
   jumpHeight: 0.7
   gravityValue: 5
+  jumpButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 3047670b-37da-448a-87df-57beb7dacd36
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!143 &1355567942
 CharacterController:
   m_ObjectHideFlags: 0
@@ -7882,7 +7808,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastGrabbedObject: {fileID: 0}
-  lastObjectPosition: {x: 0, y: 0, z: 0}
   recallButton:
     m_UseReference: 1
     m_Action:
@@ -7896,6 +7821,8 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 1010738217276881514, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
+  text: {fileID: 0}
+  player: {fileID: 0}
   canRecall: 1
 --- !u!1001 &2018731663
 PrefabInstance:
@@ -8231,10 +8158,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 2085776287}
-  offset: {fileID: 603080303}
+  rb: {fileID: 0}
   playerSpeed: 2
   jumpHeight: 1
   gravityValue: 3
+  jumpButton:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: b216e43d-d64c-4e79-b9e0-8fb1d58f4e90
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!114 &2085776284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9852,4 +9791,3 @@ SceneRoots:
   - {fileID: 641749734}
   - {fileID: 1214046181}
   - {fileID: 713635192}
-  - {fileID: 334127795}
