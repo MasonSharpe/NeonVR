@@ -14,6 +14,8 @@ public class Fade : MonoBehaviour {
     private void Awake() {
         instance = this;
         DontDestroyOnLoad(gameObject);
+        isShowing = false;
+        Hide();
     }
 
     public void Show() {

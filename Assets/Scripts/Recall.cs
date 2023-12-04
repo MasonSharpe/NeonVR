@@ -46,7 +46,7 @@ public class Recall : MonoBehaviour
     {
         if (lastGrabbedObject != null)
         {
-            lastGrabbedObject.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z);
+            lastGrabbedObject.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.5f, player.transform.position.z);
             lastGrabbedObject.GetComponent<Rigidbody>().velocity = Vector3.up * 4;
         }
 
