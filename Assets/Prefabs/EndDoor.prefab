@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 8212474647656895390}
   - component: {fileID: 1747665811270346430}
   - component: {fileID: 1081350074412841268}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: LevelEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
