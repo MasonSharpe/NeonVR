@@ -34,7 +34,7 @@ public class Fade : MonoBehaviour {
         {
             GameManager.instance.level++;
             SceneManager.LoadScene("Level" + GameManager.instance.level);
-            SongManager.instance.ChangeSourceState(GameManager.instance.level);
+            if (!SongManager.instance.isHoldingBall) SongManager.instance.ChangeSourceState(GameManager.instance.level);
             isShowing = false;
             Hide();
         }

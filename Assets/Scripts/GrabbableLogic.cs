@@ -12,6 +12,7 @@ public class GrabbableLogic : MonoBehaviour
         if (gameObject.layer == 12)
         {
             SongManager.instance.ChangeSourceState(SongManager.instance.fadeDestination + 1);
+            SongManager.instance.isHoldingBall = true;
         }
     }
 
@@ -20,6 +21,7 @@ public class GrabbableLogic : MonoBehaviour
         if (gameObject.layer == 12)
         {
             SongManager.instance.ChangeSourceState(SongManager.instance.fadeDestination - 1);
+            SongManager.instance.isHoldingBall = false;
         }
     }
 
