@@ -1056,7 +1056,7 @@ PrefabInstance:
     - target: {fileID: 5976121990256143418, guid: 0d3b0c8d51238f945995487ec8df27f7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.781
+      value: -11.74
       objectReference: {fileID: 0}
     - target: {fileID: 5976121990256143418, guid: 0d3b0c8d51238f945995487ec8df27f7,
         type: 3}
@@ -1066,7 +1066,7 @@ PrefabInstance:
     - target: {fileID: 5976121990256143418, guid: 0d3b0c8d51238f945995487ec8df27f7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.572
+      value: 4.91
       objectReference: {fileID: 0}
     - target: {fileID: 5976121990256143418, guid: 0d3b0c8d51238f945995487ec8df27f7,
         type: 3}
@@ -4833,6 +4833,19 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -6395602842196007441, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
+  restartButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Restart Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: adbe4ee3-554f-4bba-9bb3-b66b3a478343
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 2387711382375263438, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
   text: {fileID: 0}
   player: {fileID: 443385590}
   canRecall: 1
@@ -5168,7 +5181,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 1855836014308820768, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: 3994978066732806534, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
 --- !u!114 &898104308
 MonoBehaviour:
@@ -12313,7 +12326,7 @@ PrefabInstance:
     - target: {fileID: 152584357143352212, guid: 46be4bec6a55203408162f0347ce84a8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.56
+      value: 2.747
       objectReference: {fileID: 0}
     - target: {fileID: 152584357143352212, guid: 46be4bec6a55203408162f0347ce84a8,
         type: 3}
@@ -12323,7 +12336,7 @@ PrefabInstance:
     - target: {fileID: 152584357143352212, guid: 46be4bec6a55203408162f0347ce84a8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.1940002
+      value: 4.983
       objectReference: {fileID: 0}
     - target: {fileID: 152584357143352212, guid: 46be4bec6a55203408162f0347ce84a8,
         type: 3}
@@ -12671,12 +12684,12 @@ PrefabInstance:
     - target: {fileID: 2981338407228707035, guid: 0a8baa0776e6f954086501b592499c5b,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 19.972376
+      value: 12.736384
       objectReference: {fileID: 0}
     - target: {fileID: 2981338407228707035, guid: 0a8baa0776e6f954086501b592499c5b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1534
+      value: -5.7714
       objectReference: {fileID: 0}
     - target: {fileID: 2981338407228707035, guid: 0a8baa0776e6f954086501b592499c5b,
         type: 3}

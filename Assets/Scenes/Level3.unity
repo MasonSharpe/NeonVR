@@ -9080,7 +9080,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 1855836014308820768, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: 3994978066732806534, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
 --- !u!114 &1762217226
 MonoBehaviour:
@@ -10621,6 +10621,19 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -6395602842196007441, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  restartButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Restart Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 72514e98-d479-4bf5-943f-00cb594c9fd7
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 2387711382375263438, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   text: {fileID: 0}
   player: {fileID: 312579475}
