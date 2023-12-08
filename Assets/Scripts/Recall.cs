@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Recall : MonoBehaviour
 {
     public static Recall instance;
     public GameObject lastGrabbedObject;
     public InputActionProperty recallButton;
+    public InputActionProperty restartButton;
     public TextMeshProUGUI text;
     public GameObject player;
     public bool canRecall = true;
@@ -25,6 +27,12 @@ public class Recall : MonoBehaviour
         if (triggerValue <= 0 && !canRecall)
         {
             canRecall = true;
+        }
+
+        float restartValue = recallButton.action.ReadValue<float>();
+        if (triggerValue >= 1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
     private void Awake()

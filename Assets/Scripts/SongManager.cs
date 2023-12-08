@@ -11,7 +11,6 @@ public class SongManager : MonoBehaviour
     public float fadeProgress = 0;
     public int fadeDestination = 0;
     public bool fadeDirection = false;
-    public bool isHoldingBall = false;
 
     public void ChangeSourceState(int index)
     {

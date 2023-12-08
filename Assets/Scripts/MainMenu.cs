@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class MainMenu : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class MainMenu : MonoBehaviour
 
     public AudioMixerGroup musicMixer;
     public AudioMixerGroup soundMixer;
+
+    public XRRayInteractor leftRay;
+    public XRRayInteractor rightRay;
 
     public InputActionProperty pauseButton;
 
@@ -59,10 +63,14 @@ public class MainMenu : MonoBehaviour
     public void Resume()
     {
         canvas.enabled = false;
+        leftRay.enableUIInteraction = false;
+        rightRay.enableUIInteraction = false;
     }
 
     public void Show()
     {
         canvas.enabled = true;
+        leftRay.enableUIInteraction = true;
+        rightRay.enableUIInteraction = true;
     }
 }

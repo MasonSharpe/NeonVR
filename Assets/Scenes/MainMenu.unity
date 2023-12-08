@@ -315,12 +315,12 @@ PrefabInstance:
     - target: {fileID: 7228363553985072685, guid: 78c5ff442d612164185418bb8bd93a9e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -1.07
       objectReference: {fileID: 0}
     - target: {fileID: 7228363553985072685, guid: 78c5ff442d612164185418bb8bd93a9e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.5221
+      value: -13.01
       objectReference: {fileID: 0}
     - target: {fileID: 7228363553985072685, guid: 78c5ff442d612164185418bb8bd93a9e,
         type: 3}
@@ -800,8 +800,12 @@ MonoBehaviour:
   exitButton: {fileID: 1173154136}
   musicSlider: {fileID: 1280280562}
   soundSlider: {fileID: 2120975608}
-  musicMixer: {fileID: 0}
-  soundMixer: {fileID: 0}
+  musicMixer: {fileID: 6094882091736320649, guid: 81adf1a490dccb843a4d6d57e2ecd7f3,
+    type: 2}
+  soundMixer: {fileID: 644034812668464902, guid: 81adf1a490dccb843a4d6d57e2ecd7f3,
+    type: 2}
+  leftRay: {fileID: 2010170979}
+  rightRay: {fileID: 1578398792}
   pauseButton:
     m_UseReference: 0
     m_Action:
@@ -1338,6 +1342,37 @@ MonoBehaviour:
     m_Reference: {fileID: -6447266317303757838, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!1 &392477174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 392477175}
+  m_Layer: 0
+  m_Name: Targets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &392477175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392477174}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1086805368}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &422618835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,7 +1726,7 @@ CharacterController:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Height: 1.5
   m_Radius: 0.2
@@ -2573,7 +2608,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 768470482}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 229062786}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &768470482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2642,7 +2689,8 @@ AudioSource:
   m_GameObject: {fileID: 773834060}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6094882091736320649, guid: 81adf1a490dccb843a4d6d57e2ecd7f3,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 07084d846e4e74e41afa4d280aeafb2a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
@@ -2738,7 +2786,8 @@ AudioSource:
   m_GameObject: {fileID: 773834060}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6094882091736320649, guid: 81adf1a490dccb843a4d6d57e2ecd7f3,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 8379238c957abb943a2ba350deebb62c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
@@ -2834,7 +2883,8 @@ AudioSource:
   m_GameObject: {fileID: 773834060}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6094882091736320649, guid: 81adf1a490dccb843a4d6d57e2ecd7f3,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 9d0afbf7f34ac874981585c8130bbba0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
@@ -2930,7 +2980,8 @@ AudioSource:
   m_GameObject: {fileID: 773834060}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6094882091736320649, guid: 81adf1a490dccb843a4d6d57e2ecd7f3,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: f9c57e57c62c6ee4f9932f1cce5ad8e2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -3354,6 +3405,113 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036810130}
   m_CullTransparentMesh: 1
+--- !u!1 &1086805367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1086805368}
+  - component: {fileID: 1086805371}
+  - component: {fileID: 1086805370}
+  - component: {fileID: 1086805369}
+  m_Layer: 0
+  m_Name: Plane (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1086805368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086805367}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.37, y: 1.48, z: -5.2}
+  m_LocalScale: {x: 12.64, y: 5.8876, z: 1.0055073}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 392477175}
+  m_Father: {fileID: 1280672574}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!64 &1086805369
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086805367}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1086805370
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086805367}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 6d41e3054cc63664eab2f6565aaf4733, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1086805371
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086805367}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1094489518
 GameObject:
   m_ObjectHideFlags: 0
@@ -3446,7 +3604,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -3467,7 +3625,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1173154137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 229062786}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1173154137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3839,7 +4009,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 229062786}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: MusicSliderChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1280672573
 GameObject:
   m_ObjectHideFlags: 0
@@ -3873,6 +4055,7 @@ Transform:
   - {fileID: 1003163128}
   - {fileID: 1361184000}
   - {fileID: 192869213}
+  - {fileID: 1086805368}
   - {fileID: 611119680}
   - {fileID: 6650179027196340252}
   m_Father: {fileID: 0}
@@ -4318,7 +4501,7 @@ PrefabInstance:
     - target: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 109434732395451517, guid: 65847589f926b734d9eaed6e25f0046b,
         type: 3}
@@ -5292,7 +5475,7 @@ MonoBehaviour:
   m_AllowHoverHapticsWhileSelecting: 1
   m_LineType: 0
   m_BlendVisualLinePoints: 1
-  m_MaxRaycastDistance: 1.25
+  m_MaxRaycastDistance: 22
   m_RayOriginTransform: {fileID: 0}
   m_ReferenceFrame: {fileID: 0}
   m_Velocity: 16
@@ -5317,7 +5500,7 @@ MonoBehaviour:
   m_HoverTimeToSelect: 0.5
   m_AutoDeselect: 0
   m_TimeToAutoDeselect: 3
-  m_EnableUIInteraction: 0
+  m_EnableUIInteraction: 1
   m_BlockUIOnInteractableSelection: 1
   m_AllowAnchorControl: 1
   m_UseForceGrab: 1
@@ -5682,7 +5865,7 @@ PrefabInstance:
     - target: {fileID: 5686134208185362930, guid: 1fd3a7c43c8190f4d8c167ebde694364,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6378,7 +6561,7 @@ MonoBehaviour:
   m_AllowHoverHapticsWhileSelecting: 1
   m_LineType: 0
   m_BlendVisualLinePoints: 1
-  m_MaxRaycastDistance: 1.25
+  m_MaxRaycastDistance: 22
   m_RayOriginTransform: {fileID: 0}
   m_ReferenceFrame: {fileID: 0}
   m_Velocity: 16
@@ -6403,7 +6586,7 @@ MonoBehaviour:
   m_HoverTimeToSelect: 0.5
   m_AutoDeselect: 0
   m_TimeToAutoDeselect: 3
-  m_EnableUIInteraction: 0
+  m_EnableUIInteraction: 1
   m_BlockUIOnInteractableSelection: 1
   m_AllowAnchorControl: 1
   m_UseForceGrab: 1
@@ -6889,7 +7072,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 229062786}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: SoundSliderChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2553274394568394861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6925,7 +7120,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.12549019, g: 1, b: 0, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1.5
   m_Range: 5.1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
