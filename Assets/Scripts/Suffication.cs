@@ -9,6 +9,7 @@ public class Suffication : MonoBehaviour
     {
         if (other.gameObject.layer == 0)
         {
+            GameManager.instance.justDied = true;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
         }

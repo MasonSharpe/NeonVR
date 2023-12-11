@@ -443,6 +443,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Recall",
+                    "type": "Value",
+                    "id": "8e945bf9-5792-4acc-a6ae-7f9abcb071fc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -674,6 +683,17 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Grip Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f1b27109-865c-46d6-96e2-a2afcd83bef9",
+                    "path": "<Gamepad>/leftStickPress",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Recall",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1239,6 +1259,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Pause",
+                    "type": "Value",
+                    "id": "453b79bd-1591-4bae-8a8f-32c357655489",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -1470,6 +1499,17 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Grip Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4ace876d-dcc7-4b98-8ef7-2acc8c59b1bf",
+                    "path": "<Gamepad>/rightStickPress",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

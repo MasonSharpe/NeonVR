@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GrabbableLogic : MonoBehaviour
 {
-
+    public AudioSource source;
+    public AudioClip impactClip;
+    public AudioClip throwClip;
     public void SetRecallObject()
     {
         Recall.instance.SetLastGrabbedObject(gameObject);
@@ -21,7 +23,17 @@ public class GrabbableLogic : MonoBehaviour
         {
             SongManager.instance.ChangeSourceState(SongManager.instance.fadeDestination - 1);
         }
+        if (gameObject.GetComponent<Rigidbody>().velocity.magnitude > 3)
+        {
+            source.PlayOneShot(throwClip);
+        }
     }
 
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == 9 || collision.gameObject.layer == 0)
+        {
+            source.PlayOneShot(impactClip);
+        }
+    }
 }

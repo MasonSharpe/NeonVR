@@ -15,6 +15,11 @@ public class Recall : MonoBehaviour
     public GameObject player;
     public bool canRecall = true;
 
+    public AudioSource source;
+    public AudioClip onClip;
+    public AudioClip deathClip;
+    public AudioClip winClip;
+
     private void Update()
     {
         float triggerValue = recallButton.action.ReadValue<float>();
@@ -43,6 +48,14 @@ public class Recall : MonoBehaviour
     private void Start()
     {
         player.transform.localPosition = Vector3.zero;
+        if (GameManager.instance.justDied)
+        {
+            source.PlayOneShot(deathClip);
+        }
+        else
+        {
+            source.PlayOneShot(winClip);
+        }
     }
     public void SetLastGrabbedObject(GameObject gameObject)
     {
@@ -54,6 +67,8 @@ public class Recall : MonoBehaviour
     {
         if (lastGrabbedObject != null)
         {
+            source.PlayOneShot(onClip);
+
             lastGrabbedObject.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.5f, player.transform.position.z);
             lastGrabbedObject.GetComponent<Rigidbody>().velocity = Vector3.up * 4;
         }

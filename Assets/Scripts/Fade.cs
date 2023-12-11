@@ -24,17 +24,17 @@ public class Fade : MonoBehaviour {
 
     public void Show() {
         isShowing = true;
-        fadeTimer = 2f;
+        fadeTimer = 0.1f;
     }
 
     public void Hide() {
         isShowing = false;
-        fadeTimer = 2f;
+        fadeTimer = 0.1f;
     }
 
     private void Update() {
         fadeTimer -= Time.deltaTime;
-        sprite.color = new Color(0, 0, 0, isShowing ? (2f - fadeTimer) / 2f : fadeTimer / 2f);
+        sprite.color = new Color(0, 0, 0, isShowing ? (0.1f - fadeTimer) / 0.1f : fadeTimer / 0.1f);
         if (fadeTimer <= -1 && isShowing)
         {
             GameManager.instance.level++;

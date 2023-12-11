@@ -12,6 +12,10 @@ public class PressurePlate : MonoBehaviour
     public Collider lightCollider;
     public Vector3 lightPosition;
 
+    public AudioSource source;
+    public AudioClip onClip;
+    public AudioClip offClip;
+
     private void Start()
     {
         lightPosition = lightObject.transform.position;
@@ -26,6 +30,7 @@ public class PressurePlate : MonoBehaviour
             {
                 connectedDoor.OpenDoor();
                 lightObject.transform.position = lightPosition;
+                source.PlayOneShot(onClip);
             }
         }
     }
@@ -38,6 +43,7 @@ public class PressurePlate : MonoBehaviour
             {
                 connectedDoor.CloseDoor();
                 lightObject.transform.position = Vector3.down * 100;
+                source.PlayOneShot(offClip);
 
             }
         }
