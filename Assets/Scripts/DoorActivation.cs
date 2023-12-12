@@ -9,6 +9,9 @@ public class DoorActivation : MonoBehaviour
     public bool activatedByKey = true;
     public bool reversed = false;
 
+    public AudioSource source;
+    public AudioClip unlockClip;
+
     public void OpenDoor()
     {
         areaCollider.enabled = reversed;
@@ -27,6 +30,7 @@ public class DoorActivation : MonoBehaviour
         {
             OpenDoor();
             Destroy(other.transform.parent.gameObject);
+            source.PlayOneShot(unlockClip);
         }
     }
 }

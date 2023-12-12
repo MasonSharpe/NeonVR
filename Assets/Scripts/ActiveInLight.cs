@@ -46,7 +46,7 @@ public class ActiveInLight : MonoBehaviour
         }
         else
         {
-            areaCollider.enabled = state;
+            if (areaCollider != null) areaCollider.enabled = state;
             areaVisual.enabled = state;
         }
     }

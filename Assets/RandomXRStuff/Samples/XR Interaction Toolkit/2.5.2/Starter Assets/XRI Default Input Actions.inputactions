@@ -446,7 +446,7 @@
                 },
                 {
                     "name": "Recall",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "8e945bf9-5792-4acc-a6ae-7f9abcb071fc",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -689,10 +689,10 @@
                 {
                     "name": "",
                     "id": "f1b27109-865c-46d6-96e2-a2afcd83bef9",
-                    "path": "<Gamepad>/leftStickPress",
+                    "path": "<XRController>{LeftHand}/{Primary2DAxisClick}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Recall",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1262,7 +1262,7 @@
                 },
                 {
                     "name": "Pause",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "453b79bd-1591-4bae-8a8f-32c357655489",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -1505,10 +1505,10 @@
                 {
                     "name": "",
                     "id": "4ace876d-dcc7-4b98-8ef7-2acc8c59b1bf",
-                    "path": "<Gamepad>/rightStickPress",
+                    "path": "<XRController>{RightHand}/{Secondary2DAxisClick}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false

@@ -23,20 +23,21 @@ public class Recall : MonoBehaviour
     private void Update()
     {
         float triggerValue = recallButton.action.ReadValue<float>();
-       // text.text = triggerValue.ToString();
-        if (triggerValue >= 1 && canRecall)
+        
+        if (triggerValue == 1 && canRecall)
         {
             canRecall = false;
             RecallObject();
         }
-        if (triggerValue <= 0 && !canRecall)
+        if (triggerValue != 1 && !canRecall)
         {
             canRecall = true;
         }
 
-        float restartValue = recallButton.action.ReadValue<float>();
-        if (triggerValue >= 1)
+        float restartValue = restartButton.action.ReadValue<float>();
+        if (restartValue == 1)
         {
+            GameManager.instance.justDied = true;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
@@ -54,7 +55,7 @@ public class Recall : MonoBehaviour
         }
         else
         {
-            source.PlayOneShot(winClip);
+            source.PlayOneShot(winClip, 0.5f);
         }
     }
     public void SetLastGrabbedObject(GameObject gameObject)

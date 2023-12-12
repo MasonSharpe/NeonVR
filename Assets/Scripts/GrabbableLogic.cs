@@ -25,7 +25,7 @@ public class GrabbableLogic : MonoBehaviour
         }
         if (gameObject.GetComponent<Rigidbody>().velocity.magnitude > 3)
         {
-            source.PlayOneShot(throwClip);
+            source.PlayOneShot(throwClip, 0.75f);
         }
     }
 
