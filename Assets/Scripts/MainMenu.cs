@@ -27,7 +27,7 @@ public class MainMenu : MonoBehaviour
     private void Update()
     {
         float triggerValue = pauseButton.action.ReadValue<float>();
-        Recall.instance.text.text = triggerValue.ToString();
+        //Recall.instance.text.text = triggerValue.ToString();
         if ((triggerValue == 1 || Input.GetKeyDown(KeyCode.Escape)) && SceneManager.GetActiveScene().name != "MainMenu")
         {
             if (canvas.enabled)

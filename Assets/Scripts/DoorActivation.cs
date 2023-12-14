@@ -30,7 +30,7 @@ public class DoorActivation : MonoBehaviour
         {
             OpenDoor();
             Destroy(other.transform.parent.gameObject);
-            source.PlayOneShot(unlockClip);
+            if (source != null) source.PlayOneShot(unlockClip);
         }
     }
 }

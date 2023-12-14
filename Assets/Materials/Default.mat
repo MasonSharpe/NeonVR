@@ -24,7 +24,8 @@ Material:
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 2100000, guid: a0d87ccd38de76b40991cdfe3d2e0642, type: 2}
   m_ModifiedSerializedProperties: 16
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _SPECULAR_SETUP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -41,11 +42,13 @@ Material:
     m_Floats:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
-    - _Smoothness: 0.5
+    - _Metallic: 0.144
+    - _Smoothness: 0.949
     - _Surface: 0
-    - _WorkflowMode: 1
+    - _WorkflowMode: 0
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 1, g: 0.97012943, b: 0.8235294, a: 1}
-    - _Color: {r: 1, g: 0.97012943, b: 0.8235294, a: 1}
+    - _BaseColor: {r: 0.4292453, g: 1, b: 0.45022616, a: 1}
+    - _Color: {r: 0.42924526, g: 1, b: 0.45022607, a: 1}
+    - _SpecColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
   m_BuildTextureStacks: []

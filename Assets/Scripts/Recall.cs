@@ -55,7 +55,7 @@ public class Recall : MonoBehaviour
         }
         else
         {
-            source.PlayOneShot(winClip, 0.5f);
+            source.PlayOneShot(deathClip);
         }
     }
     public void SetLastGrabbedObject(GameObject gameObject)
