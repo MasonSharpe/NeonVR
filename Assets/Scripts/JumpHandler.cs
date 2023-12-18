@@ -17,7 +17,6 @@ public class JumpHandler : MonoBehaviour
     }
     public void Jump()
     {
-        print("a");
         character.Move(Vector3.up * Mathf.Sqrt(jumpHeight * -2f * gravity));
     }
 }

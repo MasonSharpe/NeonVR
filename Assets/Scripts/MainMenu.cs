@@ -74,4 +74,9 @@ public class MainMenu : MonoBehaviour
         leftRay.enableUIInteraction = true;
         rightRay.enableUIInteraction = true;
     }
+
+    public void ChangeDifficulty(int value)
+    {
+        GameManager.instance.difficulty = value;
+    }
 }

@@ -20,8 +20,19 @@ public class Recall : MonoBehaviour
     public AudioClip deathClip;
     public AudioClip winClip;
 
+    public float[] timeLimits;
+    public float timer;
+    public TextMeshProUGUI timerText;
+
     private void Update()
     {
+        timer += Time.deltaTime;
+        timerText.text = Mathf.Clamp(Mathf.Round(timeLimits[GameManager.instance.difficulty] - timer), 0, 10000).ToString();
+        if (timer > timeLimits[GameManager.instance.difficulty] && GameManager.instance.difficulty > 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
         float triggerValue = recallButton.action.ReadValue<float>();
         
         if (triggerValue == 1 && canRecall)
@@ -49,6 +60,7 @@ public class Recall : MonoBehaviour
     private void Start()
     {
         player.transform.localPosition = Vector3.zero;
+        timer = 0;
         if (GameManager.instance.justDied)
         {
             source.PlayOneShot(deathClip);
@@ -57,6 +69,8 @@ public class Recall : MonoBehaviour
         {
             source.PlayOneShot(deathClip);
         }
+
+        timerText.canvas.enabled = GameManager.instance.difficulty != 0;
     }
     public void SetLastGrabbedObject(GameObject gameObject)
     {

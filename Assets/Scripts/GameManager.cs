@@ -8,12 +8,14 @@ public class GameManager : MonoBehaviour
 
     public int level;
     public bool justDied;
+    public int difficulty;
 
     private void Awake()
     {
         instance = this;
         DontDestroyOnLoad(gameObject);
         level = 1;
+        difficulty = 0;
         justDied = true;
     }
 }
