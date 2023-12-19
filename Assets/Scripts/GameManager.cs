@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         DontDestroyOnLoad(gameObject);
-        level = 1;
-        difficulty = 0;
+        level = 5;
+        difficulty = 1;
         justDied = true;
     }
 }

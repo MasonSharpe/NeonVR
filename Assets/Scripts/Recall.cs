@@ -23,6 +23,7 @@ public class Recall : MonoBehaviour
     public float[] timeLimits;
     public float timer;
     public TextMeshProUGUI timerText;
+    public Canvas timerCanvas;
 
     private void Update()
     {
@@ -69,8 +70,7 @@ public class Recall : MonoBehaviour
         {
             source.PlayOneShot(deathClip);
         }
-
-        timerText.canvas.enabled = GameManager.instance.difficulty != 0;
+        timerCanvas.enabled = GameManager.instance.difficulty != 0;
     }
     public void SetLastGrabbedObject(GameObject gameObject)
     {

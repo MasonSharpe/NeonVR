@@ -2112,6 +2112,7 @@ MonoBehaviour:
   - 18
   timer: 0
   timerText: {fileID: 6295839717700167493}
+  timerCanvas: {fileID: 0}
 --- !u!114 &682855899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6930,7 +6931,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2356305769374997522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6.45}
+  m_LocalPosition: {x: 0, y: 0, z: -4.58}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6938,7 +6939,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -367.34, y: -292.25}
+  m_AnchoredPosition: {x: -367.34, y: -291.98}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &3466668588942386578
